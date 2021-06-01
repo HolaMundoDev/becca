@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Python
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          python-version: "14.17.0"
+          node-version: "14.17.0"
 
       - name: Install yarn
         run: npm i yarn -g 
