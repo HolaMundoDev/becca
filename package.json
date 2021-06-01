@@ -16,8 +16,7 @@
     "postinstall": "husky install"
   },
   "engines": {
-    "node": "^14.17.0",
-    "yarn": "^1.20.0"
+    "node": "^14.17.0"
   },
   "dependencies": {
     "discord.js": "^12.5.3",
