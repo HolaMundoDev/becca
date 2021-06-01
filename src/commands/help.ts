@@ -18,7 +18,6 @@ const helpCommand: Command = {
     const res = embed({
       title: 'Commandos',
       description,
-      color: 0x3498db
     })
 
     sendMessage(message.channel, res)
