@@ -15,7 +15,8 @@ const avatarCommand: Command = {
         : `¡<@${message.author.id}>, Este es su avatar!`,
       image: mention
         ? mention.user.displayAvatarURL({ dynamic: true, size: 1024 })
-        : message.author.displayAvatarURL({ dynamic: true, size: 1024 })
+        : message.author.displayAvatarURL({ dynamic: true, size: 1024 }),
+      color: 'RANDOM'
     })
 
     sendMessage(message.channel, res)

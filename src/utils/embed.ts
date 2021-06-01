@@ -1,10 +1,11 @@
-import { MessageEmbed } from 'discord.js'
+import { ColorResolvable, MessageEmbed } from 'discord.js'
 
 interface EmbedProps {
   title: string
   description?: string
   image?: string
   url?: string
+  color?: ColorResolvable
   timestamp?: number | Date
 }
 
@@ -22,6 +23,9 @@ export default function embed(props: EmbedProps): MessageEmbed {
 
   // Url
   props.url && embed.setURL(props.url)
+
+  // Colors
+  props.color && embed.setColor(props.color)
 
   // Timestamp
   props.timestamp
