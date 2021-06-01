@@ -1,0 +1,40 @@
+{
+  "name": "holamundo-bot",
+  "version": "0.1.0",
+  "main": "build/index.js",
+  "author": "Jheyson Saavedra <jheysondev@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --ext \"ts,json\" --exec \"ts-node src/index.ts\"",
+    "build": "tsc",
+    "start": "node .",
+    "format": "prettier **/*.{ts,json} --write --ignore-path .gitignore",
+    "format:check": "prettier **/*.{ts,json} --check --ignore-path .gitignore",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "postinstall": "husky install"
+  },
+  "engines": {
+    "node": "^14.17.0",
+    "yarn": "^1.20.0"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
