@@ -9,8 +9,8 @@
     "dev": "nodemon --ext \"ts,json\" --exec \"ts-node src/index.ts\"",
     "build": "tsc",
     "start": "node .",
-    "format": "prettier **/*.{ts,json} --write --ignore-path .gitignore",
-    "format:check": "prettier **/*.{ts,json} --check --ignore-path .gitignore",
+    "format": "prettier **/**/*.{ts,json} --write --ignore-path .gitignore",
+    "format:check": "prettier **/**/*.{ts,json} --check --ignore-path .gitignore",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "postinstall": "husky install"
