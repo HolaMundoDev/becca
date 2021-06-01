@@ -17,7 +17,7 @@ const helpCommand: Command = {
 
     const res = embed({
       title: 'Commandos',
-      description,
+      description
     })
 
     sendMessage(message.channel, res)
