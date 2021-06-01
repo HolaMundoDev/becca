@@ -20,6 +20,9 @@ jobs:
           node-version: 14.17.0
           architecture: x86
 
+      - name: Setup Yarn
+        run: npm i -g yarn
+
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -27,13 +30,10 @@ jobs:
       - uses: actions/cache@v2
         id: yarn-cache
         with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-
-      - name: Setup Yarn
-        run: npm i -g yarn
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Format
         run: yarn run format:check
