@@ -13,7 +13,8 @@ const pingCommand: Command = {
         title: 'Pong!',
         description: `🏓 La latencia es de ${
           Date.now() - message.createdTimestamp
-        }ms. La latencia de la API es de ${Math.round(client.ws.ping)}ms`
+        }ms. La latencia de la API es de ${Math.round(client.ws.ping)}ms`,
+        color: 'RANDOM'
       })
     )
   }

@@ -33,7 +33,8 @@ export default function onMessageReactionAdd(
       }> con el siguiente contenido:\n\n> ${
         reaction.message.content || '*El mensaje no tiene un contenido valido*'
       }`,
-      url: reaction.message.url
+      url: reaction.message.url,
+      color: 0xe74c3c
     })
 
     if ((reaction.count as number) >= 5) {
