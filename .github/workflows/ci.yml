@@ -1,8 +1,10 @@
-name: "Hola Mundo Evil CI"
+name: Ci
+
+on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: Build on ${{ matrix.os }}
     strategy:
       matrix:
         os:
@@ -21,9 +23,15 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
+
       - name: Setup yarn
-      - run: npm i yarn -g
+        run: npm i yarn -g
+
       - name: Format
-      - run: yarn format
+        run: yarn run format:check
+
       - name: Lint
-      - run: yarn lint
+        run: yarn run lint
+
+      - name: Build
+        run: yarn run build
