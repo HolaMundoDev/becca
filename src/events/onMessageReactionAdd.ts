@@ -31,7 +31,7 @@ export default function onMessageReactionAdd(
       }> en el canal <#${
         reaction.message.channel.id
       }> con el siguiente contenido:\n\n> ${
-        reaction.message.content.replace('\n', '\n>') ||
+        (reaction.message.content as string).replaceAll('\n', '\n> ') ||
         '*El mensaje no tiene un contenido valido*'
       }`,
       url: reaction.message.url,
