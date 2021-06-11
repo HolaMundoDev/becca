@@ -31,15 +31,17 @@ export default function onMessageReactionAdd(
       }> en el canal <#${
         reaction.message.channel.id
       }> con el siguiente contenido:\n\n> ${
-        reaction.message.content || '*El mensaje no tiene un contenido valido*'
+        reaction.message.content.replace('\n', '\n>') ||
+        '*El mensaje no tiene un contenido valido*'
       }`,
       url: reaction.message.url,
       color: 0xe74c3c
     })
 
-    if ((reaction.count as number) >= 5) {
-      sendMessage(channel, '<@&789593087293784115>')
-    }
+    // TODO: when adding anonymity in the reports this method became invalid, we have to find a way to do this again
+    // if ((reaction.count as number) >= 5) {
+    //   sendMessage(channel, '<@&789593087293784115>')
+    // }
     sendMessage(channel, res)
     reaction.remove()
 
