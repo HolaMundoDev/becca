@@ -15,9 +15,6 @@
     "lint:fix": "eslint src/**/*.ts --fix",
     "postinstall": "husky install"
   },
-  "engines": {
-    "node": "^14.17.0"
-  },
   "dependencies": {
     "discord.js": "^12.5.3",
     "winston": "^3.3.3"

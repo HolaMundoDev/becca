@@ -5,6 +5,7 @@
     "module": "commonjs",
     "outDir": "./build",
     "rootDir": "./src",
+    "lib": ["esnext"],
 
     /* Strict Type-Checking Options */
     "strict": true,
